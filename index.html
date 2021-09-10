@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slideshow.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="sample.css" />
+    <title>TinyFeet</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftDiv">
+        <ul>
+          <li>
+            <a href="#home" class="tinyfeet"
+              ><img class="logo" src="feet.png" alt="" /><strong
+                >TinyFeet</strong
+              ></a
+            >
+          </li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="products.html">PRODUCTS</a></li>
+          <li><a href="blogs.html">BLOGS</a></li>
+        </ul>
+      </div>
+      <div class="rightDiv">
+        <button class="btnlogin btnright" onclick="openLogInForm()">
+          <b>LOG IN</b>
+        </button>
+        <i class="material-icons">person</i>
+        <button
+          class="btnsignup btnright"
+          id="register"
+          onclick="openSignUpForm()"
+        >
+          REGISTER
+        </button>
+        <!-- <a href="#" class="hamburger btnright"> &#9776; </a> -->
+        <button class="hamburger btnright" onclick="openHamburger()">
+          &#9776;
+        </button>
+        <div class="menu-popup" id="mymenu">
+          <form class="menu-container" name="menu1">
+            <ul>
+              <li><a class="ham" href="index.html">HOME</a></li>
+              <br />
+              <li><a class="ham" href="about.html">ABOUT</a></li>
+              <br />
+              <li><a class="ham" href="products.html">PRODUCTS</a></li>
+              <br />
+              <li><a class="ham" href="blogs.html">BLOGS</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="image">
+        <img src="momson.jpg" alt="photo" class="momImg" />
+      </div>
+
+      <div class="para">
+        <p class="paraContent">
+          The best way to make your baby healthy is to make them happy!<button
+            class="read btnblogs"
+            id="readid"
+            onclick="window.location.href='blogs.html';"
+          >
+            Read More
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div class="form-popup" id="myForm">
+      <form class="form-container" name="form1">
+        <h1>SIGN UP</h1>
+
+        <label for="Name"><b>Name</b></label>
+        <input
+          type="text"
+          id="nme"
+          placeholder="Enter Name"
+          name="Name"
+          required
+        />
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="email"
+          id="mail"
+          placeholder="Enter Email"
+          name="email"
+          required
+        />
+
+        <label for="pwd"><b>Password</b></label>
+        <input
+          type="password"
+          id="pswd"
+          placeholder="Enter Password"
+          name="pwd"
+          required
+        />
+
+        <button type="submit" class="btn" onclick="validate()">
+          Sign Up
+        </button>
+        <div class="member">
+          <p>Already a Member?</p>
+          <button id="logbtnid" class="logbtn" onclick="openLogInForm()">
+            Log In
+          </button>
+        </div>
+
+        <button type="button" class="btn cancel" onclick="closeSignUpForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
+    <!-- addding another form -->
+    <div class="form2-popup" id="myForm2">
+      <form class="form2-container">
+        <h1>LOG IN</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <label for="pwd"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="pwd"
+          required
+        />
+
+        <button type="submit" class="btn">Log In</button>
+        <button type="button" class="btn cancel" onclick="closeLogInForm()">
+          Close
+        </button>
+      </form>
+    </div>
+    <!-- ending another form -->
+    <!-- thanku note -->
+    <div class="form3-popup" id="myForm3">
+      <form class="form3-container">
+        <h3>Thank You for Registering With Us!</h3>
+        <button type="button" class="btn cancel" onclick="closeThanksPopUp()">
+          Close
+        </button>
+      </form>
+    </div>
+    <!-- thanku note end -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="img1.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img2.jpeg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img3.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="img4.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <img src="img5.jpg" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <footer class="footer">
+      <div class="footercontent">
+        <div class="col1 col">About</div>
+        <div class="col2 col">Services</div>
+        <div class="col3 col">Contact</div>
+      </div>
+      <i class="material-icons">facebook</i>
+      <i class="material-icons">email</i>
+      <i class="material-icons">phone</i>
+      <p>TinyFeet&#169;2021</p>
+    </footer>
+    <script src="tinyfeet.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.menu-popup {
+  display: none;
+  position: fixed;
+  margin-top: 50px;
+  margin-right: -20px;
+  top: 0;
+  right: 15px;
+  border: 3px solid #ffcccc;
+  background-color: #ffcccc;
+  z-index: 9;
+}
+
+/* Add styles to the menu container */
+.menu-container {
+  max-width: 300px;
+  padding-right: 48px;
+  background-color: #ffcccc;
+}
+
+ul li a.ham {
+  padding: 2px;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  text-align: center;
+}
+
+.hamburger {
+  background-color: #ffb3b3;
+  border: none;
+}
